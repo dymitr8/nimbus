@@ -28,6 +28,7 @@
         >
           <div
             v-for="(item, index) in images"
+            :key="index"
             class="aspect-square h-auto w-full"
           >
             <div
