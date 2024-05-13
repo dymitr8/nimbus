@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto max-w-[2000px]">
-    <div class="w-full pt-[70px]">
+  <div class="mx-auto max-w-[1600px] font-[Poppins]">
+    <div class="w-full">
       <slot />
     </div>
   </div>
