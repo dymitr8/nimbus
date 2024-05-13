@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container py-10 md:py-20">
+  <div class="v-container">
     <div class="grid w-full gap-10 lg:grid-cols-2">
       <div
         class="flex flex-col justify-between space-y-8 sm:w-10/12 lg:w-full lg:max-w-[600px]"

@@ -2,7 +2,8 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    "nuxt-marquee"
   ],
   css: ['~/assets/css/main.css'],
   devServer: {
