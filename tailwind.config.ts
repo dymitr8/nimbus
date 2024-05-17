@@ -7,7 +7,8 @@ export default <Partial<Config>>{
     extend: {},
     colors: {
       ...colors,
-      swampy: '#397326',
+      primary: '#397326',
+      secondary: '#eff0ef'
     },
     screens: {
       sm: '640px',

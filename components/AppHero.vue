@@ -16,7 +16,7 @@
         </p>
 
         <div
-          class="bg-swampy w-full rounded-2xl px-8 py-4 text-center text-white sm:w-max"
+          class="bg-primary w-full rounded-2xl px-8 py-4 text-center text-white sm:w-max"
         >
           Book an appointment
         </div>
@@ -36,7 +36,7 @@
               class="relative h-full w-full scale-75 rounded-[34px] bg-gray-300"
             >
               <div
-                class="bg-swampy absolute -right-4 -top-4 h-12 w-12 -rotate-[10deg] rounded-xl"
+                class="bg-primary absolute -right-4 -top-4 h-12 w-12 -rotate-[10deg] rounded-xl"
               />
             </div>
 

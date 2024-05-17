@@ -11,7 +11,7 @@
       <NuxtImg
         v-for="logo in logos"
         :key="logo"
-        :src="`/logos/marquee/${logo}.svg`"
+        :src="`/icons/marquee/${logo}.svg`"
         class="mr-16 h-10 transition-opacity duration-300 hover:opacity-60"
       />
     </NuxtMarquee>
