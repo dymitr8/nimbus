@@ -3,7 +3,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     '@nuxtjs/google-fonts',
-    "nuxt-marquee"
+    "nuxt-marquee",
+    '@vueuse/nuxt',
   ],
   css: ['~/assets/css/main.css'],
   devServer: {

@@ -1,6 +1,6 @@
 <template>
   <div class="v-container">
-    <h3 class="text-primary text-sm uppercase">About us</h3>
+    <h3 class="mt-4 text-sm uppercase text-primary">About us</h3>
     <h4 class="mt-4 text-4xl font-medium tracking-wider">
       Empowering Innovation AI
     </h4>

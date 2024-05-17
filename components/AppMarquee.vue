@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container !py-8">
+  <div class="v-container mt-6 !py-8">
     <NuxtMarquee
       gradient
       auto-fill

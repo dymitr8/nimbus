@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container">
+  <div class="v-container !pt-32">
     <div class="grid w-full gap-10 lg:grid-cols-2">
       <div
         class="flex flex-col justify-between space-y-8 sm:w-10/12 lg:w-full lg:max-w-[600px]"
@@ -16,7 +16,7 @@
         </p>
 
         <div
-          class="bg-primary w-full rounded-2xl px-8 py-4 text-center text-white sm:w-max"
+          class="w-full rounded-2xl bg-primary px-8 py-4 text-center text-white sm:w-max"
         >
           Book an appointment
         </div>
@@ -36,7 +36,7 @@
               class="relative h-full w-full scale-75 rounded-[34px] bg-gray-300"
             >
               <div
-                class="bg-primary absolute -right-4 -top-4 h-12 w-12 -rotate-[10deg] rounded-xl"
+                class="absolute -right-4 -top-4 h-12 w-12 -rotate-[10deg] rounded-xl bg-primary"
               />
             </div>
 
@@ -50,6 +50,7 @@
               />
 
               <NuxtImg
+                v-if="!!item"
                 :src="`/hero/${item}.jpg`"
                 format="webp"
                 quality="10"
