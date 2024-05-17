@@ -4,6 +4,7 @@
   <AppAbout />
   <AppSolutions />
   <AppTrial />
+  <AppFaq />
 </template>
 
 <script setup lang="ts"></script>
