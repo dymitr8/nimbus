@@ -1,11 +1,11 @@
 <template>
   <AppHeader />
-  <AppHero />
+  <AppHero id="hero" />
   <AppMarquee />
-  <AppAbout />
-  <AppSolutions />
-  <AppTrial />
-  <AppFaq />
+  <AppAbout id="about" />
+  <AppSolutions id="solutions" />
+  <AppTrial id="trial" />
+  <AppFaq id="faq" />
 </template>
 
 <script setup lang="ts"></script>
