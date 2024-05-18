@@ -10,6 +10,11 @@ export default defineNuxtConfig({
   devServer: {
     port: 7777,
   },
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
+  },
   googleFonts: {
     families:{
       Poppins: [300, 400, 500, 600, 700]

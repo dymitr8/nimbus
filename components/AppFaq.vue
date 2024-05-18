@@ -7,7 +7,7 @@
       </h4>
 
       <p class="mt-4 font-light text-gray-600">
-        Explore to learn more about how DataWise can empower your business with
+        Explore to learn more about how Nimbus can empower your business with
         AI-driven solutions.
       </p>
     </div>
@@ -32,12 +32,12 @@
 const faq = ref([
   {
     question:
-      "Can DataWise's AI solutions be integrated with existing business systems?",
+      'Can Nimbus AI solutions be integrated with existing business systems?',
     answer:
-      "Yes, integration is a key strength of our AI solutions. DataWise's AI platform is designed for flexibility and can be integrated with a wide range of existing business systems.",
+      'Yes, integration is a key strength of our AI solutions. Nimbus AI platform is designed for flexibility and can be integrated with a wide range of existing business systems.',
   },
   {
-    question: 'What types of AI services does DataWise offer?',
+    question: 'What types of AI services does Nimbus offer?',
     answer:
       'Absolutely, our services are scalable and designed to accommodate and process large amounts of data efficiently.',
   },
