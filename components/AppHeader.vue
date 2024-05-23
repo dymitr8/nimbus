@@ -63,8 +63,8 @@
 
     <div
       id="drawer"
-      class="v-container fixed z-10 m-auto flex h-[calc(100vh-65px)] w-full flex-col justify-between bg-white py-2 transition-all duration-300 md:h-[calc(100vh-79px)]"
-      :class="[open ? 'top-[65px] md:top-[79px]' : '-top-[100vh]']"
+      class="v-container fixed z-10 m-auto flex h-[calc(100dvh-65px)] w-full flex-col justify-between bg-white py-2 transition-all duration-300 md:h-[calc(100dvh-79px)]"
+      :class="[open ? 'top-[65px] md:top-[79px]' : '-top-[100dvh]']"
     />
   </div>
 </template>
@@ -84,12 +84,9 @@ function hashScroll(hash: string, home: boolean) {
   const timeout = greaterOrEqual('lg').value ? 0 : 300
   open.value = false
 
-  if (home) {
-    scrollTo({ top: 0, behavior: 'smooth' })
-    return router.push({ hash })
-  }
-
   setTimeout(() => {
+    if (home) return scrollTo({ top: 0, behavior: 'smooth' })
+
     router.push({ hash })
   }, timeout)
 }
@@ -97,6 +94,8 @@ function hashScroll(hash: string, home: boolean) {
 watch(
   () => y.value,
   (newV, oldV) => {
+    if (newV === 0) router.push({ hash: '' })
+
     if (newV > 70 && newV > oldV) {
       scrolled.value = true
     } else if (newV < oldV) {
@@ -105,7 +104,11 @@ watch(
   },
 )
 
-watch(open, (newV) => {
-  document.body.style.overflow = newV ? 'clip' : 'auto'
-})
+watch(
+  () => open.value,
+  (newV) => {
+    document.body.style.overflow = newV ? 'clip' : 'auto'
+    document.body.style.touchAction = newV ? 'none' : 'auto'
+  },
+)
 </script>
