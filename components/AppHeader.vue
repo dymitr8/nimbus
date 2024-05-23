@@ -10,7 +10,7 @@
         <NuxtImg
           src="/icons/nimbus.svg"
           width="105"
-          @click="hashScroll('', true)"
+          @click="hashScroll(null)"
         />
 
         <ClientOnly>
@@ -21,7 +21,7 @@
                   v-for="item in links"
                   :key="item"
                   class="cursor-pointer border-b-[1px] border-gray-300 py-6 lg:border-none lg:py-0"
-                  @click="hashScroll(`#${item.toLowerCase()}`, false)"
+                  @click="hashScroll(`#${item.toLowerCase()}`)"
                 >
                   {{ item }}
                 </div>
@@ -80,12 +80,12 @@ const { y } = useWindowScroll()
 const { greaterOrEqual } = useBreakpoints(breakpointsTailwind)
 const router = useRouter()
 
-function hashScroll(hash: string, home: boolean) {
+function hashScroll(hash: string | null) {
   const timeout = greaterOrEqual('lg').value ? 0 : 300
   open.value = false
 
   setTimeout(() => {
-    if (home) return scrollTo({ top: 0, behavior: 'smooth' })
+    if (!hash) return scrollTo({ top: 0, behavior: 'smooth' })
 
     router.push({ hash })
   }, timeout)
