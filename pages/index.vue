@@ -1,5 +1,4 @@
 <template>
-  <AppHeader />
   <AppHero id="hero" />
   <AppMarquee />
   <AppAbout id="about" />
