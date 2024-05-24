@@ -15,10 +15,13 @@
           your business processes.
         </p>
 
-        <div
-          class="w-full rounded-2xl bg-primary px-8 py-4 text-center text-white sm:w-max"
-        >
-          Book an appointment
+        <div>
+          <div class="relative sm:w-max">
+            <BaseButton title="Book an appointment" class="md:w-max" />
+            <div
+              class="absolute right-[14px] top-[14px] h-2 w-2 animate-ping rounded-full bg-white"
+            />
+          </div>
         </div>
       </div>
 

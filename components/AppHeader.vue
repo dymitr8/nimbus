@@ -9,7 +9,7 @@
       <div class="flex items-center gap-10">
         <NuxtImg
           src="/icons/nimbus.svg"
-          width="105"
+          class="w-[105px] cursor-pointer"
           @click="hashScroll(null)"
         />
 
@@ -35,20 +35,15 @@
         <ClientOnly>
           <Teleport to="#drawer" :disabled="greaterOrEqual('md').value">
             <div
-              class="mb-2 w-full gap-2 space-y-4 md:mb-0 md:flex md:space-y-0"
+              class="mb-4 w-full space-y-4 md:mb-0 md:flex md:gap-2 md:space-y-0"
             >
-              <div
-                class="flex !w-full items-center justify-center gap-2 rounded-2xl border-[1px] border-primary px-5 py-3 text-sm text-primary"
-              >
-                <span> Get a demo </span>
-              </div>
-
-              <div
-                class="flex !w-full min-w-52 items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-3 text-sm text-white"
-              >
-                <span> Start your free trial </span>
-                <NuxtImg src="/icons/ai-white.svg" class="min-w-4" />
-              </div>
+              <BaseButton title="Get a demo" outlined small />
+              <BaseButton
+                title="Start your free trial"
+                icon="ai-white"
+                class="min-w-52"
+                small
+              />
             </div>
           </Teleport>
         </ClientOnly>
