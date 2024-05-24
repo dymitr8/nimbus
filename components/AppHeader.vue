@@ -43,15 +43,16 @@
                 icon="ai-white"
                 class="min-w-52"
                 small
+                @click="modal = true"
               />
             </div>
           </Teleport>
         </ClientOnly>
 
         <NuxtImg
-          :src="`/icons/${open ? 'close' : 'burger-menu'}.svg`"
+          :src="`/icons/${drawer ? 'close' : 'burger-menu'}.svg`"
           class="block min-w-8 lg:hidden"
-          @click="open = !open"
+          @click="drawer = !drawer"
         />
       </div>
     </div>
@@ -59,15 +60,20 @@
     <div
       id="drawer"
       class="v-container fixed z-10 m-auto flex h-[calc(100dvh-65px)] w-full flex-col justify-between bg-white py-2 transition-all duration-300 md:h-[calc(100dvh-79px)]"
-      :class="[open ? 'top-[65px] md:top-[79px]' : '-top-[100dvh]']"
+      :class="[drawer ? 'top-[65px] md:top-[79px]' : '-top-[100dvh]']"
     />
+
+    <BaseModal :open="modal" @onClose="modal = false">
+      <BaseTrialForm />
+    </BaseModal>
   </div>
 </template>
 
 <script setup lang="ts">
 import { breakpointsTailwind } from '@vueuse/core'
 
-const open = ref(false)
+const drawer = ref(false)
+const modal = ref(false)
 const scrolled = ref(false)
 const links = ref(['About', 'Solutions', 'Trial', 'FAQ'])
 
@@ -78,7 +84,7 @@ const { disableScroll } = useDisableScroll()
 
 function hashScroll(hash: string | null) {
   const timeout = greaterOrEqual('lg').value ? 0 : 300
-  open.value = false
+  drawer.value = false
 
   setTimeout(() => {
     if (!hash) return scrollTo({ top: 0, behavior: 'smooth' })
@@ -101,7 +107,7 @@ watch(
 )
 
 watch(
-  () => open.value,
+  () => drawer.value,
   (newV) => disableScroll(newV),
 )
 </script>

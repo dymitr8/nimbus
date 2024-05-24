@@ -25,13 +25,8 @@
         title="Start your free trial"
         icon="ai-white"
         class="mt-8 sm:w-max"
+        @click="modal = true"
       />
-      <!-- <div
-        class="mt-8 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-8 py-4 text-white sm:w-max"
-      >
-        <span> Start your free trial </span>
-        <NuxtImg src="/icons/ai-white.svg" class="min-w-5" />
-      </div> -->
     </div>
 
     <div class="flex justify-end">
@@ -57,10 +52,16 @@
         />
       </div>
     </div>
+
+    <BaseModal :open="modal" @onClose="modal = false">
+      <BaseTrialForm />
+    </BaseModal>
   </div>
 </template>
 
 <script setup lang="ts">
+const modal = ref(false)
+
 const analytics = ref([
   'Context-aware natural language search and discovery',
   'Embark on a journey of data-driven decision-making',
