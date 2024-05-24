@@ -71,9 +71,10 @@ const open = ref(false)
 const scrolled = ref(false)
 const links = ref(['About', 'Solutions', 'Trial', 'FAQ'])
 
+const router = useRouter()
 const { y } = useWindowScroll()
 const { greaterOrEqual } = useBreakpoints(breakpointsTailwind)
-const router = useRouter()
+const { disableScroll } = useDisableScroll()
 
 function hashScroll(hash: string | null) {
   const timeout = greaterOrEqual('lg').value ? 0 : 300
@@ -101,9 +102,6 @@ watch(
 
 watch(
   () => open.value,
-  (newV) => {
-    document.body.style.overflow = newV ? 'clip' : 'auto'
-    document.body.style.touchAction = newV ? 'none' : 'auto'
-  },
+  (newV) => disableScroll(newV),
 )
 </script>
