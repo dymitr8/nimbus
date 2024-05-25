@@ -32,13 +32,15 @@ const emit = defineEmits(['onClose'])
 
 const modalRef = ref(null)
 
-const { disableScroll } = useDisableScroll()
+const { freezeScroll, isScrollFreezed } = useScrollFreeze()
 
 onClickOutside(modalRef, () => emit('onClose'))
 
 watch(
   () => props.open,
-  (newV) => disableScroll(newV),
+  (newV) => {
+    if (!isScrollFreezed.value) freezeScroll(newV)
+  },
 )
 </script>
 

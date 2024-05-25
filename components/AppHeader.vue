@@ -80,7 +80,7 @@ const links = ref(['About', 'Solutions', 'Trial', 'FAQ'])
 const router = useRouter()
 const { y } = useWindowScroll()
 const { greaterOrEqual } = useBreakpoints(breakpointsTailwind)
-const { disableScroll } = useDisableScroll()
+const { freezeScroll } = useScrollFreeze()
 
 function hashScroll(hash: string | null) {
   const timeout = greaterOrEqual('lg').value ? 0 : 300
@@ -108,6 +108,6 @@ watch(
 
 watch(
   () => drawer.value,
-  (newV) => disableScroll(newV),
+  (newV) => freezeScroll(newV),
 )
 </script>
