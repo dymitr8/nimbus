@@ -16,7 +16,7 @@
             :key="item"
             class="flex items-center gap-2"
           >
-            <NuxtImg src="/icons/ai.svg" class="min-w-5" />
+            <NuxtImg src="/icons/ai.svg" class="min-w-5" loading="lazy" />
             <span class="font-light">{{ item }}</span>
           </div>
         </div>
@@ -36,7 +36,7 @@
         <div
           class="absolute -bottom-[1px] -left-[1px] z-10 flex w-8/12 gap-4 rounded-2xl border-[1px] border-gray-300 bg-white p-5"
         >
-          <NuxtImg src="/icons/ai-bright.svg" class="min-w-7" />
+          <NuxtImg src="/icons/ai-bright.svg" class="min-w-7" loading="lazy" />
 
           <div class="flex w-full animate-pulse flex-col gap-2">
             <div class="h-2.5 w-1/2 rounded-lg bg-gray-300" />
@@ -48,6 +48,7 @@
           src="/abstract.jpg"
           format="webp"
           quality="30"
+          loading="lazy"
           class="h-full w-full rounded-2xl object-cover object-center"
         />
       </div>

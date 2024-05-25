@@ -12,6 +12,7 @@
         v-for="logo in logos"
         :key="logo"
         :src="`/icons/marquee/${logo}.svg`"
+        loading="lazy"
         class="mr-10 h-10 transition-opacity duration-300 hover:opacity-60 md:mr-16"
       />
     </NuxtMarquee>

@@ -10,6 +10,7 @@
     <NuxtImg
       v-if="props.icon"
       :src="`/icons/${props.icon}.svg`"
+      loading="lazy"
       class="min-w-4"
     />
   </button>

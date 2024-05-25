@@ -3,7 +3,7 @@
     <Transition name="modal">
       <div
         v-if="props.open"
-        class="fixed z-[60] flex h-[100dvh] w-full items-center justify-center bg-[#00000040] font-[Poppins] outline-none"
+        class="fixed z-[60] flex h-[100dvh] w-full items-center justify-center bg-[#00000040] font-[Poppins]"
       >
         <div
           ref="modalRef"
@@ -13,6 +13,7 @@
 
           <NuxtImg
             src="/icons/close.svg"
+            loading="lazy"
             class="absolute right-5 top-5 w-8 cursor-pointer"
             @click="emit('onClose')"
           />

@@ -57,6 +57,7 @@
                 :src="`/hero/${item}.jpg`"
                 format="webp"
                 quality="10"
+                loading="lazy"
                 class="z-2 absolute h-full w-full rounded-[34px] object-cover"
               />
             </div>

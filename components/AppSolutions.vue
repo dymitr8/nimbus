@@ -1,7 +1,7 @@
 <template>
   <div class="v-container flex flex-col gap-16">
     <div class="m-auto">
-      <h3 class="text-primary text-center text-sm uppercase">Solutions</h3>
+      <h3 class="text-center text-sm uppercase text-primary">Solutions</h3>
       <h4
         class="mt-4 text-center text-3xl font-medium tracking-wider md:text-4xl"
       >
@@ -15,7 +15,11 @@
       class="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-0"
     >
       <div v-for="item in solutions" class="border-t-2 border-gray-300 pt-10">
-        <NuxtImg :src="`/icons/solutions/${item.icon}.svg`" width="60" />
+        <NuxtImg
+          :src="`/icons/solutions/${item.icon}.svg`"
+          width="60"
+          loading="lazy"
+        />
 
         <div class="mt-16">
           <h4 class="w-9/12 text-2xl font-semibold">{{ item.title }}</h4>

@@ -10,6 +10,7 @@
         <NuxtImg
           src="/icons/nimbus.svg"
           class="w-[105px] cursor-pointer"
+          loading="lazy"
           @click="hashScroll(null)"
         />
 
@@ -51,6 +52,7 @@
 
         <NuxtImg
           :src="`/icons/${drawer ? 'close' : 'burger-menu'}.svg`"
+          loading="lazy"
           class="block min-w-8 lg:hidden"
           @click="drawer = !drawer"
         />
