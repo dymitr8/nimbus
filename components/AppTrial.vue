@@ -1,5 +1,10 @@
 <template>
-  <div class="v-container grid gap-y-10 bg-secondary lg:grid-cols-2">
+  <div
+    id="trial"
+    ref="trialRef"
+    class="v-container grid gap-y-10 bg-secondary lg:grid-cols-2"
+    :class="scrollSpyClass"
+  >
     <div class="flex flex-col justify-between">
       <div>
         <h4 class="text-4xl font-medium tracking-wider">
@@ -62,10 +67,13 @@
 
 <script setup lang="ts">
 const modal = ref(false)
+const trialRef = ref(null)
 
 const analytics = ref([
   'Context-aware natural language search and discovery',
   'Embark on a journey of data-driven decision-making',
   'Single permission model for data + AI',
 ])
+
+const { scrollSpyClass } = useScrollSpy(trialRef)
 </script>

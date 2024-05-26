@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container !pt-32">
+  <div class="v-container !pt-32" ref="heroRef" :class="scrollSpyClass">
     <div class="grid w-full gap-10 lg:grid-cols-2">
       <div
         class="flex flex-col justify-between space-y-8 sm:w-10/12 lg:w-full lg:max-w-[600px]"
@@ -69,5 +69,8 @@
 </template>
 
 <script setup lang="ts">
+const heroRef = ref(null)
 const images = ref([null, 1, 2, null, 3, 4, 5, 6, 7])
+
+const { scrollSpyClass } = useScrollSpy(heroRef)
 </script>

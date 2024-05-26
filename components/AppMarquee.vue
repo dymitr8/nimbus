@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container mt-6 !py-8">
+  <div class="v-container mt-6 !py-8" ref="marqueeRef" :class="scrollSpyClass">
     <NuxtMarquee
       gradient
       auto-fill
@@ -20,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+const marqueeRef = ref(null)
 const logos = ref([
   'nlogo',
   'ojbrand',
@@ -34,4 +35,6 @@ const logos = ref([
   'cynaroll',
   'pokes',
 ])
+
+const { scrollSpyClass } = useScrollSpy(marqueeRef)
 </script>

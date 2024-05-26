@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container">
+  <div id="about" ref="aboutRef" class="v-container" :class="scrollSpyClass">
     <h3 class="mt-4 text-sm uppercase text-primary">About us</h3>
     <h4 class="mt-4 text-4xl font-medium tracking-wider">
       Empowering Innovation AI
@@ -32,6 +32,7 @@
 </template>
 
 <script setup lang="ts">
+const aboutRef = ref(null)
 const metrics = ref([
   {
     metric: '15+',
@@ -46,4 +47,6 @@ const metrics = ref([
     label: 'Projects Successfully Implemented',
   },
 ])
+
+const { scrollSpyClass } = useScrollSpy(aboutRef)
 </script>

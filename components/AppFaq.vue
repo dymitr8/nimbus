@@ -1,5 +1,5 @@
 <template>
-  <div class="v-container">
+  <div id="faq" ref="faqRef" class="v-container" :class="scrollSpyClass">
     <div class="lg:w-1/2">
       <h3 class="text-sm uppercase text-primary">FAQ</h3>
       <h4 class="mt-4 text-3xl font-medium tracking-wider md:text-4xl">
@@ -29,6 +29,7 @@
 </template>
 
 <script setup lang="ts">
+const faqRef = ref(null)
 const faq = ref([
   {
     question:
@@ -62,4 +63,6 @@ const faq = ref([
       'Yes, our platform allows for custom model training with your proprietary datasets.',
   },
 ])
+
+const { scrollSpyClass } = useScrollSpy(faqRef)
 </script>

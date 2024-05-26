@@ -1,5 +1,10 @@
 <template>
-  <div class="v-container flex flex-col gap-16">
+  <div
+    id="solutions"
+    ref="solutionsRef"
+    class="v-container flex flex-col gap-16"
+    :class="scrollSpyClass"
+  >
     <div class="m-auto">
       <h3 class="text-center text-sm uppercase text-primary">Solutions</h3>
       <h4
@@ -31,6 +36,8 @@
 </template>
 
 <script setup lang="ts">
+const solutionsRef = ref(null)
+
 const solutions = ref([
   {
     icon: 'analytics',
@@ -53,4 +60,6 @@ const solutions = ref([
     text: 'Collaborate with our team of AI experts to build and deploy bespoke models.',
   },
 ])
+
+const { scrollSpyClass } = useScrollSpy(solutionsRef)
 </script>
