@@ -12,7 +12,7 @@ export function useScrollSpy(target: Ref<HTMLDivElement | null>) {
   const scrollSpyClass = computed(() => [
     targetIsVisible.value
       ? 'translate-x-0 opacity-100 transition-all duration-700'
-      : 'translate-x-6 opacity-0 transition-all duration-500',
+      : 'translate-x-6 opacity-0 transition-all duration-700',
   ])
 
   return { scrollSpyClass }
