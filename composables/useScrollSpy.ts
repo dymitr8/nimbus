@@ -1,12 +1,17 @@
+import { breakpointsTailwind } from '@vueuse/core'
+
 export function useScrollSpy(target: Ref<HTMLDivElement | null>) {
   const targetIsVisible = ref(false)
+
+const { greaterOrEqual } = useBreakpoints(breakpointsTailwind)
+const threshold = greaterOrEqual('md').value ? 0.4 : 0.2
 
   useIntersectionObserver(
     target,
     ([{ isIntersecting }]) => {
       targetIsVisible.value = isIntersecting
     },
-    { threshold: 0.4, root: null, rootMargin: '0px' },
+    { threshold, root: null, rootMargin: '0px' },
   )
 
   const scrollSpyClass = computed(() => [
