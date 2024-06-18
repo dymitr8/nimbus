@@ -19,7 +19,11 @@
     <div
       class="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-0"
     >
-      <div v-for="item in solutions" class="border-t-2 border-gray-300 pt-10">
+      <div
+        v-for="item in solutions"
+        :key="item.icon"
+        class="border-t-2 border-gray-300 pt-10"
+      >
         <NuxtImg
           :src="`/icons/solutions/${item.icon}.svg`"
           width="60"

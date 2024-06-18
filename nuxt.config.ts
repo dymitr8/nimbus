@@ -3,8 +3,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
     '@nuxtjs/google-fonts',
-    "nuxt-marquee",
+    'nuxt-marquee',
     '@vueuse/nuxt',
+    '@nuxt/eslint',
   ],
   css: ['~/assets/css/main.css'],
   devServer: {
@@ -12,12 +13,12 @@ export default defineNuxtConfig({
   },
   router: {
     options: {
-      scrollBehaviorType: 'smooth'
-    }
+      scrollBehaviorType: 'smooth',
+    },
   },
   googleFonts: {
-    families:{
-      Poppins: [300, 400, 500, 600, 700]
-    }
-  }
+    families: {
+      Poppins: [300, 400, 500, 600, 700],
+    },
+  },
 })
