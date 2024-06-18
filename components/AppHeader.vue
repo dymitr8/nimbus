@@ -9,7 +9,7 @@
       <div class="flex items-center gap-10">
         <NuxtImg
           src="/icons/nimbus.svg"
-          class="w-[105px] cursor-pointer"
+          class="w- w-[105px] cursor-pointer"
           loading="lazy"
           @click="hashScroll(null)"
         />
@@ -65,7 +65,7 @@
       :class="[drawer ? 'top-[65px] md:top-[79px]' : '-top-[100dvh]']"
     />
 
-    <BaseModal :open="modal" @onClose="modal = false">
+    <BaseModal :open="modal" @on-close="modal = false">
       <BaseTrialForm />
     </BaseModal>
   </div>

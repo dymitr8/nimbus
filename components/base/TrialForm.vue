@@ -14,8 +14,9 @@
         for="emailInput"
         class="ml-1 text-sm text-gray-500 transition-colors duration-500"
         :class="[error && 'text-red-500']"
-        >Email</label
       >
+        Email
+      </label>
       <input
         id="emailInput"
         ref="inputRef"

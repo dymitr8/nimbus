@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <BaseModal :open="modal" @onClose="modal = false">
+    <BaseModal :open="modal" @on-close="modal = false">
       <BaseTrialForm />
     </BaseModal>
   </div>
