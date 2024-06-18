@@ -1,11 +1,11 @@
 <template>
-  <div class="v-container mt-6 !py-8" ref="marqueeRef" :class="scrollSpyClass">
+  <div ref="marqueeRef" class="v-container mt-6 !py-8" :class="scrollSpyClass">
     <NuxtMarquee
+      :gradient-width="100"
+      :speed="20"
       gradient
       auto-fill
       pause-on-hover
-      :gradient-width="100"
-      :speed="20"
       class="cursor-pointer"
     >
       <NuxtImg

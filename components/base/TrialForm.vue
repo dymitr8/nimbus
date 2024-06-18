@@ -17,9 +17,9 @@
         >Email</label
       >
       <input
-        v-model="email"
-        ref="inputRef"
         id="emailInput"
+        ref="inputRef"
+        v-model="email"
         type="text"
         class="max-h-[54px] w-full rounded-2xl border-[1px] border-gray-300 px-4 py-4 outline-none transition-colors duration-500"
         :class="[error && 'border-red-500']"
