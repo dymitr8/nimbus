@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-50 w-full bg-white py-0 transition-all duration-300 ease-in-out 2xl:w-[1600px]"
+    class="fixed z-50 w-screen bg-white py-0 transition-all duration-300 ease-in-out 2xl:w-[1600px]"
     :class="[scrolled && '-translate-y-20']"
   >
     <div
@@ -9,7 +9,7 @@
       <div class="flex items-center gap-10">
         <NuxtImg
           src="/icons/nimbus.svg"
-          class="w- w-[105px] cursor-pointer"
+          class="w-[105px] cursor-pointer"
           loading="lazy"
           @click="hashScroll(null)"
         />

@@ -4,7 +4,7 @@ export function useScrollSpy(target: Ref<HTMLDivElement | null>) {
   const targetIsVisible = ref(false)
 
   const { greaterOrEqual } = useBreakpoints(breakpointsTailwind)
-  const threshold: number = greaterOrEqual('md').value ? 0.4 : 0.2
+  const threshold: number = greaterOrEqual('md').value ? 0.4 : 0.15
 
   useIntersectionObserver(
     target,
